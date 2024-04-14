@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    background-color: #fff;
+    color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    position: fixed; /* ou 'absolute', selon le comportement désiré */
+    width: 100%; /* Assurez-vous qu'il s'étend sur toute la largeur */
+    z-index: 1000; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+    /*background: #fff;*/
+}
+header nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 1em;
+}
+main {
+    /*padding-top: 100px; /* Espace pour l'entête fixe */
+}
+section {
+    margin-top: 25px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.accueil-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right; /* Aligner le texte à droite */
+    margin: 0; /* Ajustez selon la maquette */
+    padding: 2em; /* Ajustez pour positionner le contenu en bas à droite */
+    max-width: 600px;
+}
+.galerie-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.galerie-container img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #ccc;
+}
+.center{
+    text-align: center;
+}
+.sectionTitle{
+    color:seagreen;
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 25px;
+}
+.teamMember{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.serviceContainer{
+    width: 177px;
+    height: 177px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+}
+.service{
+    width: 77px;
+    height: 77px;
+    object-fit: cover;
+    object-position: center;
+    text-align: center;
+}
+.teamMemberDescription{
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 400;
+}
+.clientInfosBox{
+    font-size: 14px;
+    color: white;
+}
+.clientInfosNumber{
+    font-size: 16px;
+    color: yellowgreen;
+}
+.pos00{
+    object-position: 0% 0%;
+}
+.mAuto{
+    margin: auto;
+}
+.jStart{
+    justify-self: start;
+}
+.jEnd{
+    justify-self: end;
+}
+.form-group {
+    margin-bottom: 15px; /* Ajoute un espace en dessous de chaque groupe d'entrée */
+    width: 100%;
+}
+
+.form-group label {
+    display: block; /* Rend le label en bloc pour qu'il occupe sa propre ligne */
+    margin-bottom: 5px; /* Ajoute un petit espace entre le label et l'input */
+}
+
+.form-group input, textarea, #contactEmail  {
+    width: 100%; /* Utiliser la largeur complète du conteneur */
+    padding: 10px; /* Ajoute un peu d'espacement interne à l'input */
+    border: 2px solid white; /* Une bordure légère pour l'input */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #193235;
+    color: white;
+}
+
+
+#accueil{
+    background-image: url('/reactHTML/img/rodion-kutsaev-049M_crau5k-unsplash 1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Faire en sorte que la section d'accueil occupe toute la hauteur de la fenêtre */
+    position: relative;
+}
+#accueil h1 {
+    color: white;
+    font-size: 2.5em;
+}
+#galerie {
+    text-align: center;
+    padding: 4em;
+}
+#titleEndPart{
+    color: yellowgreen;
+}
+#agenceEcoContainer{
+    display: flex;
+    color: green;
+    font-weight: 900;
+}
+#agenceEco{
+    margin: auto;
+}
+#agenceEcoEnd{
+    font-style: italic;
+}
+#menuContainer{
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+}
+#equipe, #services{
+    font-weight: 900;
+    color: #444;
+}
+#teamMembersContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-top: 50px;
+}
+#contact{
+    padding: 15px;
+}
+#contactInfoPart1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+#servicesContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 50px;
+    gap: 80px;
+}
+#clientInfosContainer{
+    background-color: #193235;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 140px;
+    height: 10vh;
+    align-items: center;
+}
+#serviceLeft{
+    justify-self: end;
+    text-align: center;
+}
+#serviceRight{
+    justify-self: start;
+    text-align: center;
+}
+#contact{
+    background-color: #193235;
+    color: white;
+}
+#contactButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#contactButton{
+    background-color: greenyellow;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 10px 40px 10px 40px;
+    border: none;
+    margin-top: 20px;
+}
+#contactTitle{
+    color: greenyellow;
+}
+#contactMessage{
+    margin-top: 15px;
+}
+
+@media (max-width: 1082px) {
+    .accueil {
+        height: 50vh; /* Hauteur réduite pour les appareils mobiles */
+    }
+    .accueil h1 {
+        font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
+    }
+    .galerie-container {
+        flex-direction: column;
+    }
+    #agenceEcoContainer, #agenceEcoSpace{
+        display: none;
+    }
+    #menuContainer{
+        display: block;
+    }
+}
+
+@media (max-width: 655px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%; /* Les liens prennent toute la largeur */
+        text-align: center;
+    }
+    .accueil {
+        height: 50vh; /* Hauteur réduite pour les appareils mobiles */
+    }
+    .accueil h1 {
+        font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
+    }
+    .galerie-container {
+        flex-direction: column;
+    }
+    #agenceEcoContainer, #agenceEcoSpace{
+        display: none;
+    }
+    #menuContainer{
+        display: block;
+    }
+    #teamMembersContainer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 120px;
+        justify-items: center;
+        margin-top: 50px;
+    }
+}
