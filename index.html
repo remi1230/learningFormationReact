@@ -16,10 +16,10 @@
             <div id="agenceEcoSpace"></div>
             <nav>
                 <a href="#accueil">Accueil</a>
-                <a href="#equipe">Notre équipe</a>
-                <a href="#services">Nos services</a>
-                <a href="#contact">Contactez-nous</a>
-                <a href="#galerie">Notre galerie</a> 
+                <a href="#teamAnchor">Notre équipe</a>
+                <a href="#serviceAnchor">Nos services</a>
+                <a href="#contactAnchor">Contactez-nous</a>
+                <a href="#galleryAnchor">Notre galerie</a> 
             </nav>
         </div>
     </header>
@@ -30,7 +30,7 @@
                 <h1>Bienvenue dans votre <span id="titleEndPart">agence web écologique</span></h1>
             </div>
         </section>
-
+        <div class="sectionSeparator" id="teamAnchor"></div>
         <section id="equipe" class="center">
             <h1 class="sectionTitle">Notre équipe</h1>
             <p>
@@ -64,6 +64,7 @@
         </section>
 
         <section id="services">
+            <div class="sectionSeparator" id="serviceAnchor"></div>
             <h1 class="sectionTitle">Nos services</h1>
             <div id="servicesContainer">
                 <div id="serviceLeft">
@@ -78,6 +79,7 @@
         </section>
 
         <section id="contact">
+            <div class="sectionSeparator" id="contactAnchor"></div>
             <h1 class="sectionTitle" id="contactTitle">Contactez-nous</h1>
             <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, mollitia cumque quia id suscipit nemo minus ratione molestias.</p>
             <form>
@@ -103,19 +105,83 @@
             </form>
         </section>
         <section id="galerie">
-            <h2>Notre galerie</h2>
-            <div class="galerie-container">
-                <!-- Ici vous pouvez ajouter vos images de galerie -->
-                <img src="chemin-vers-votre-image1.jpg" alt="Description de l'image 1">
-                <img src="chemin-vers-votre-image2.jpg" alt="Description de l'image 2">
-                <!-- Ajoutez autant d'images que nécessaire -->
+            <div id="topImgGalleryContainer">
+                <div class="topImgGallery" id="topGalleryLeftPart">
+                    <img id="topGalleryLeftImg" src="/reactHTML/img/jason-goodman-Oalh2MojUuk-unsplash 1.jpg" alt="Une image">
+                </div>
+                <div class="topImgGallery" id="topGalleryRightPart">
+                    <h3 id="aproposTitle">A propos de nous</h3>
+                    <p class="teamMemberDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio cum reiciendis velit numquam officia ipsa recusandae fugit.
+                    </p>
+                    <div id="logosGalleryContainer">
+                        <div class="logosGallery"><img class="mAuto" src="/reactHTML/img/Vector-2.jpg" alt="Une image"></div>
+                        <div class="logosGallery"><img class="mAuto" src="/reactHTML/img/Vector-3.jpg" alt="Une image"></div>
+                        <div class="logosGallery"><img class="mAuto" src="/reactHTML/img/Vector-4.jpg" alt="Une image"></div>
+                        <div class="logosGalleryTitle">Écologique</div>
+                        <div class="logosGalleryTitle">Responsable</div>
+                        <div class="logosGalleryTitle">24/7 Assistance</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sectionSeparator" id="galleryAnchor"></div>
+            <h1 class="sectionTitle">Notre galerie</h1>
+            <p id="galleryTitleText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolor eaque necessitatibus quam unde eius, nisi aliquid repellat illum,
+                molestias a pariatur amet voluptas enim maiores minus sed corporis earum nesciunt.
+            </p>
+            <div id="galleryContainer">
+                <img id="galleryImg" src="/reactHTML/img/kevin-bhagat-zNRITe8NPqY-unsplash 1.jpg" alt="Une image">
+            </div>
+            <div id="galleryArrowsContainer">
+                <span class="galleryArrow fLeft"><</span>
+                <span class="galleryArrow fRight" id="galleryArrowRight">></span>
             </div>
         </section>
         
     </main>
 
     <footer>
-        <!-- Pied de page -->
+        <div id="footerContainer">
+            <div class="footerSection">
+                <div class="footerSectionTitle">Content</div>
+                <div class="footerSectionContent">consectetur</div>
+                <div class="footerSectionContent">adipisicing</div>
+            </div>
+            <div class="footerSection">
+                <div class="footerSectionTitle">Informations</div>
+                <div class="footerSectionContent">consectetur</div>
+                <div class="footerSectionContent">adipisicing</div>
+            </div>
+            <div class="footerSection">
+                <div class="footerSectionTitle">Services</div>
+                <div class="footerSectionContent">consectetur</div>
+                <div class="footerSectionContent">adipisicing</div>
+            </div>
+            <div class="footerSection">
+                <div class="footerSectionTitle">Aide</div>
+                <div class="footerSectionContent">consectetur</div>
+                <div class="footerSectionContent">adipisicing</div>
+            </div>
+            <div class="footerSection">
+                <div id="footerTelContainer" class="footerCoordContainer">
+                    <div class="footerCoordSymbolContainer"><img class="coordSymbol" src="/reactHTML/img/telephoneSymbol.png" alt="Une image"></div>
+                    <div>
+                        <div>+33 00 00 00 00 00</div>
+                        <div>+33 00 00 00 00 00</div>
+                    </div>
+                </div>
+                <div class="footerCoordContainer">
+                    <div class="footerCoordSymbolContainer"><img class="coordSymbol" src="/reactHTML/img/positionSymbol.png" alt="Une image"></div>
+                    <div>
+                        <div>75001 Paris</div>
+                        <div>France</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
+     

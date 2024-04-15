@@ -9,8 +9,8 @@ body, h1, h2, h3, p {
     font-family: 'Poppins', sans-serif;
 }
 header {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--menu);
+    color: var(--text);
     position: fixed;
     width: 100%;
     top: 0;
@@ -25,24 +25,30 @@ header nav {
     flex-wrap: wrap;
 }
 nav a {
-    color: #333;
+    color: var(--titles);
     text-decoration: none;
     padding: 1em;
+}
+nav a:hover {
+    background-color: var(--menuItemSelected);
 }
 main {
     /*padding-top: 100px; /* Espace pour l'entête fixe */
 }
 section {
-    margin-top: 25px;
+    margin-top: 0px;
 }
 footer {
-    background-color: #333;
+    background-color: var(--backgroundDark);
     color: white;
     text-align: center;
     padding: 1em;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+.sectionSeparator{
+    height: 50px;
 }
 .accueil-content {
     position: absolute;
@@ -68,7 +74,7 @@ footer {
     text-align: center;
 }
 .sectionTitle{
-    color:seagreen;
+    color:var(--title2);
     text-align: center;
     font-size: 33px;
     margin-bottom: 25px;
@@ -96,7 +102,7 @@ footer {
 }
 .teamMemberDescription{
     font-size: 14px;
-    color: #aaa;
+    color: var(--text);
     font-weight: 400;
 }
 .clientInfosBox{
@@ -105,7 +111,7 @@ footer {
 }
 .clientInfosNumber{
     font-size: 16px;
-    color: yellowgreen;
+    color: var(--yellow);
 }
 .pos00{
     object-position: 0% 0%;
@@ -136,11 +142,63 @@ footer {
     border-top: none;
     border-left: none;
     border-right: none;
-    background-color: #193235;
+    background-color: var(--backgroundDark);
     color: white;
 }
+.topImgGallery{
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+.logosGallery{
+    display: flex;
+    border: 1px #ccc solid;
+    border-radius: 50%;
+    padding: 50px;
+}
+.topImgGallery img {
+    width: 50px;
+}
+.topImgGallery {
+    overflow: hidden;
+}
+.galleryArrow{
+    width: 27px;
+    height: 27px;
+    color: var(--text);
+    border: 1px #ccc solid;
+    border-radius: 50%;
+    padding: 3px;
+    line-height: 1.3;
+}
+.coordSymbol{
+    width: 25px;
+}
+.footerCoordContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footerCoordSymbolContainer{
+    justify-self: end;
+}
+.footerSectionTitle{
+    margin-bottom: 20px;
+}
+.footerSectionContent, .footerCoordContainer{
+    font-size: 12px;
+}
+.fLeft{
+    float: left;
+}
+.fRight{
+    float: right;
+}
 
-
+/* Le texte peut se rétrécir */
+#topGalleryRightPart {
+    word-wrap: break-word; /* Autoriser la coupure des mots */
+    overflow-wrap: break-word; /* Pour éviter que le texte ne déborde */
+}
 #accueil{
     background-image: url('/reactHTML/img/rodion-kutsaev-049M_crau5k-unsplash 1.jpg');
     background-size: cover;
@@ -158,11 +216,11 @@ footer {
     padding: 4em;
 }
 #titleEndPart{
-    color: yellowgreen;
+    color: var(--yellow);
 }
 #agenceEcoContainer{
     display: flex;
-    color: green;
+    color: var(--title2);;
     font-weight: 900;
 }
 #agenceEco{
@@ -177,7 +235,7 @@ footer {
 }
 #equipe, #services{
     font-weight: 900;
-    color: #444;
+    color: var(--titles);
 }
 #teamMembersContainer{
     display: grid;
@@ -201,7 +259,7 @@ footer {
     gap: 80px;
 }
 #clientInfosContainer{
-    background-color: #193235;
+    background-color: var(--backgroundDark);;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 140px;
@@ -217,7 +275,7 @@ footer {
     text-align: center;
 }
 #contact{
-    background-color: #193235;
+    background-color: var(--backgroundDark);
     color: white;
 }
 #contactButtonContainer{
@@ -226,7 +284,7 @@ footer {
     justify-content: flex-end;
 }
 #contactButton{
-    background-color: greenyellow;
+    background-color: var(--yellow);
     border-radius: 15px;
     font-weight: 900;
     font-size: 12px;
@@ -235,11 +293,61 @@ footer {
     margin-top: 20px;
 }
 #contactTitle{
-    color: greenyellow;
+    color: var(--yellow);
 }
 #contactMessage{
     margin-top: 15px;
 }
+#topImgGalleryContainer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 15px;
+    padding: 15px;
+}
+#topGalleryLeftImg{
+    width: 100%;
+    border-radius: 15px;
+}
+#topGalleryRightPart{
+    border: 1px #ccc solid;
+}
+#logosGalleryContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    margin: 8% 0 8%;
+    justify-items: center;
+    color: var(--titles);
+    font-weight: 900;
+}
+#galleryTitle{
+    margin-top: 25px;
+}
+#aproposTitle{
+    margin: 45px 0 15px 0;
+}
+#galleryTitleText{
+    color: var(--titles);
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+#galleryImg{
+    width: 100%;
+}
+#galleryArrowRight{
+    background-color: var(--titles);
+    color: white;
+    border: none;
+}
+#footerContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+#footerTelContainer{
+    margin-bottom: 10px;
+}
+
 
 @media (max-width: 1082px) {
     .accueil {
@@ -257,6 +365,12 @@ footer {
     #menuContainer{
         display: block;
     }
+    #topImgGalleryContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .topGalleryLeftPart{
+        display: none;
+    }
 }
 
 @media (max-width: 655px) {
@@ -268,21 +382,6 @@ footer {
         width: 100%; /* Les liens prennent toute la largeur */
         text-align: center;
     }
-    .accueil {
-        height: 50vh; /* Hauteur réduite pour les appareils mobiles */
-    }
-    .accueil h1 {
-        font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
-    }
-    .galerie-container {
-        flex-direction: column;
-    }
-    #agenceEcoContainer, #agenceEcoSpace{
-        display: none;
-    }
-    #menuContainer{
-        display: block;
-    }
     #teamMembersContainer{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -290,4 +389,71 @@ footer {
         justify-items: center;
         margin-top: 50px;
     }
+    #topImgGalleryContainer{
+        justify-items: center;
+    }
+    .topGalleryLeftPart{
+        display: none;
+    }
+    .topImgGallery{
+        border-radius: 15px;
+        width: 70%;
+        height: auto;
+    }
+    .logosGallery{
+        display: flex;
+        border: 1px #ccc solid;
+        border-radius: 50%;
+        padding: 25px;
+    }
+    .topImgGallery img {
+        width: 25px;
+    }
+    .logosGalleryTitle{
+        font-size: 12px;
+    }
+}
+@media (max-width: 555px) {
+    .logosGallery{
+        padding: 15px;
+    }
+    .topImgGallery img {
+        width: 15px;
+    }
+    .logosGalleryTitle{
+        font-size: 10px;
+    }
+}
+@media (max-width: 487px) {
+    .logosGallery{
+        padding: 7px;
+    }
+    .topImgGallery img {
+        width: 7px;
+    }
+    .logosGalleryTitle{
+        font-size: 8px;
+    }
+    #servicesContainer{
+        gap: 20px;
+    }
+    #logosGalleryContainer{
+        display: none;
+    }
+    #footerContainer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+:root{
+    --backgroundDark: #053b44;
+    --text: #565E65;
+    --title2: #029D5B;
+    --titles: #1C2126;
+    --yellow: #D5F31F;
+    --menu: #fbfbfb;
+    --menuItemSelected: #f2f2f2;
 }
