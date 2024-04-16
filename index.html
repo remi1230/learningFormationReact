@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgencEco - Agence web écologique</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/reactHTML/css/styles.css">
 </head>
 <body>
     <header>
@@ -15,21 +15,23 @@
             </div>
             <div id="agenceEcoSpace"></div>
             <nav>
-                <a href="#accueil">Accueil</a>
-                <a href="#teamAnchor">Notre équipe</a>
-                <a href="#serviceAnchor">Nos services</a>
-                <a href="#contactAnchor">Contactez-nous</a>
-                <a href="#galleryAnchor">Notre galerie</a> 
+                <a href="#accueil" id="menuItemAccueil">Accueil</a>
+                <a href="#teamAnchor" id="menuItemTeam"></a>
+                <a href="#serviceAnchor" id="menuItemService"></a>
+                <a href="#contactAnchor" id="menuItemContact"></a>
+                <a href="#galleryAnchor" id="menuItemGallery"></a> 
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="accueil" class="accueil">
-            <div class="accueil-content">
-                <h1>Bienvenue dans votre <span id="titleEndPart">agence web écologique</span></h1>
-            </div>
-        </section>
+        <a href="/reactHTML/image360.html" target="_blank">
+            <section id="accueil" class="accueil">
+                <div class="accueil-content">
+                    <h1>Bienvenue dans votre <span id="titleEndPart">agence web écologique</span></h1>
+                </div>
+            </section>
+        </a>
         <div class="sectionSeparator" id="teamAnchor"></div>
         <section id="equipe" class="center">
             <h1 class="sectionTitle">Notre équipe</h1>
@@ -40,17 +42,17 @@
             </p>
             <div id="teamMembersContainer">
                 <div class="teamMember">
-                    <img class="teamMember pos00" src="/reactHTML/img/image 1.jpg" alt="Une image">
+                    <img class="teamMember pos00" src="/reactHTML/img/image-1.jpg" alt="Une image">
                     <strong>Julie Dupond</strong>
                     <p class="teamMemberDescription">Dolor eaque necessitatibus quam unde eius, nisi aliquid repellat illum</p>
                 </div>
                 <div class="teamMember">
-                    <img class="teamMember" src="/reactHTML/img/image 2.jpg" alt="Une image">
+                    <img class="teamMember" src="/reactHTML/img/image-2.jpg" alt="Une image">
                     <strong>Romeo Sylla</strong>
                     <p class="teamMemberDescription">Dolor eaque necessitatibus quam unde eius, nisi aliquid repellat illum</p>
                 </div>
                 <div class="teamMember">
-                    <img class="teamMember" src="/reactHTML/img/image 3.jpg" alt="Une image">
+                    <img class="teamMember" src="/reactHTML/img/image-3.jpg" alt="Une image">
                     <strong>Javier Bardem</strong>
                     <p class="teamMemberDescription">Dolor eaque necessitatibus quam unde eius, nisi aliquid repellat illum</p>
                 </div>
@@ -62,7 +64,6 @@
                 <div class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
             </div>
         </section>
-
         <section id="services">
             <div class="sectionSeparator" id="serviceAnchor"></div>
             <h1 class="sectionTitle">Nos services</h1>
@@ -107,7 +108,7 @@
         <section id="galerie">
             <div id="topImgGalleryContainer">
                 <div class="topImgGallery" id="topGalleryLeftPart">
-                    <img id="topGalleryLeftImg" src="/reactHTML/img/jason-goodman-Oalh2MojUuk-unsplash 1.jpg" alt="Une image">
+                    <img id="topGalleryLeftImg" src="/reactHTML/img/jason-goodman-Oalh2MojUuk-unsplash-1.jpg" alt="Une image">
                 </div>
                 <div class="topImgGallery" id="topGalleryRightPart">
                     <h3 id="aproposTitle">A propos de nous</h3>
@@ -132,10 +133,10 @@
                 molestias a pariatur amet voluptas enim maiores minus sed corporis earum nesciunt.
             </p>
             <div id="galleryContainer">
-                <img id="galleryImg" src="/reactHTML/img/kevin-bhagat-zNRITe8NPqY-unsplash 1.jpg" alt="Une image">
+                <img id="galleryImg" src="/reactHTML/img/kevin-bhagat-zNRITe8NPqY-unsplash-1.jpg" alt="Une image">
             </div>
             <div id="galleryArrowsContainer">
-                <span class="galleryArrow fLeft"><</span>
+                <span class="galleryArrow fLeft">&lt;</span>
                 <span class="galleryArrow fRight" id="galleryArrowRight">></span>
             </div>
         </section>
@@ -150,7 +151,7 @@
                 <div class="footerSectionContent">adipisicing</div>
             </div>
             <div class="footerSection">
-                <div class="footerSectionTitle">Informations</div>
+                <div class="footerSectionTitle" id="footerSectionTitleInfos"></div>
                 <div class="footerSectionContent">consectetur</div>
                 <div class="footerSectionContent">adipisicing</div>
             </div>
@@ -164,16 +165,20 @@
                 <div class="footerSectionContent">consectetur</div>
                 <div class="footerSectionContent">adipisicing</div>
             </div>
-            <div class="footerSection">
+            <div class="footerSection" id="footerSectionGallery">
                 <div id="footerTelContainer" class="footerCoordContainer">
-                    <div class="footerCoordSymbolContainer"><img class="coordSymbol" src="/reactHTML/img/telephoneSymbol.png" alt="Une image"></div>
+                    <div id="footerCoordSymbolContainerTel" class="footerCoordSymbolContainer">
+                        <img class="coordSymbol" src="/reactHTML/img/telephoneSymbol.png" alt="Une image">
+                    </div>
                     <div>
                         <div>+33 00 00 00 00 00</div>
                         <div>+33 00 00 00 00 00</div>
                     </div>
                 </div>
                 <div class="footerCoordContainer">
-                    <div class="footerCoordSymbolContainer"><img class="coordSymbol" src="/reactHTML/img/positionSymbol.png" alt="Une image"></div>
+                    <div id="footerCoordSymbolContainerAdd" class="footerCoordSymbolContainer">
+                        <img class="coordSymbol" src="/reactHTML/img/positionSymbol.png" alt="Une image">
+                    </div>
                     <div>
                         <div>75001 Paris</div>
                         <div>France</div>
