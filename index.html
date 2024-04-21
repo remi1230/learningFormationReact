@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgencEco - Agence web écologique</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/reactHTML/css/styles.css">
 </head>
@@ -14,12 +15,16 @@
                 <div id="agenceEco">Agence<span id="agenceEcoEnd">eco</span></div>
             </div>
             <div id="agenceEcoSpace"></div>
-            <nav>
-                <a href="#accueil" id="menuItemAccueil">Accueil</a>
-                <a href="#teamAnchor" id="menuItemTeam"></a>
-                <a href="#serviceAnchor" id="menuItemService"></a>
-                <a href="#contactAnchor" id="menuItemContact"></a>
-                <a href="#galleryAnchor" id="menuItemGallery"></a> 
+            <nav class="menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger" id="menuHamburger"></label>
+                <div class="menu-items">
+                    <a href="#accueil" id="menuItemAccueil">Accueil</a>
+                    <a href="#teamAnchor" id="menuItemTeam"></a>
+                    <a href="#serviceAnchor" id="menuItemService"></a>
+                    <a href="#contactAnchor" id="menuItemContact"></a>
+                    <a href="#galleryAnchor" id="menuItemGallery"></a>
+                </div>
             </nav>
         </div>
     </header>
@@ -58,14 +63,14 @@
                 </div>
             </div>
             <div id="clientInfosContainer">
-                <div class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
-                <div class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
-                <div class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
-                <div class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
+                <div id="clientInfosBox-1" class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
+                <div id="clientInfosBox-2" class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
+                <div id="clientInfosBox-3" class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
+                <div id="clientInfosBox-4" class="clientInfosBox"><div class="clientInfosNumber">2500</div><div>Clients satisfaits</div></div>
             </div>
         </section>
+        <div class="sectionSeparator" id="serviceAnchor"></div>
         <section id="services">
-            <div class="sectionSeparator" id="serviceAnchor"></div>
             <h1 class="sectionTitle">Nos services</h1>
             <div id="servicesContainer">
                 <div id="serviceLeft">
@@ -78,9 +83,8 @@
                 </div>
             </div>
         </section>
-
+        <div class="sectionSeparator" id="contactAnchor"></div>
         <section id="contact">
-            <div class="sectionSeparator" id="contactAnchor"></div>
             <h1 class="sectionTitle" id="contactTitle">Contactez-nous</h1>
             <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, mollitia cumque quia id suscipit nemo minus ratione molestias.</p>
             <form>
@@ -112,7 +116,7 @@
                 </div>
                 <div class="topImgGallery" id="topGalleryRightPart">
                     <h3 id="aproposTitle">A propos de nous</h3>
-                    <p class="teamMemberDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p id="teamDescription" class="teamMemberDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Odio cum reiciendis velit numquam officia ipsa recusandae fugit.
                     </p>
                     <div id="logosGalleryContainer">
@@ -137,7 +141,7 @@
             </div>
             <div id="galleryArrowsContainer">
                 <span class="galleryArrow fLeft">&lt;</span>
-                <span class="galleryArrow fRight" id="galleryArrowRight">></span>
+                <span class="galleryArrow fRight">></span>
             </div>
         </section>
         
@@ -189,4 +193,3 @@
     </footer>
 </body>
 </html>
-     

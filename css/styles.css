@@ -170,6 +170,12 @@ footer {
     padding: 3px;
     line-height: 1.3;
 }
+.galleryArrow:hover{
+    background-color: var(--titles);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 .coordSymbol{
     width: 25px;
 }
@@ -192,6 +198,9 @@ footer {
 }
 .fRight{
     float: right;
+}
+.menu{
+    justify-self: end;
 }
 
 /* Le texte peut se rétrécir */
@@ -232,6 +241,8 @@ footer {
 #menuContainer{
     display: grid;
     grid-template-columns: 10% 30% 60%;
+    height: 55px;
+    align-items: center;
 }
 #equipe, #services{
     font-weight: 900;
@@ -335,11 +346,6 @@ footer {
 #galleryImg{
     width: 100%;
 }
-#galleryArrowRight{
-    background-color: var(--titles);
-    color: white;
-    border: none;
-}
 #footerContainer{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -366,6 +372,32 @@ footer {
 #footerCoordSymbolContainerTel{
     padding-top: 6px;
 }
+#menuHamburger::after{
+    content: '\2630';
+}
+#teamDescription{
+    padding: 0 5px;
+}
+
+
+/* ************************ MENU ************************ */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+#menuHamburger{
+    text-align: center;
+    margin-right: 5px;
+}
+#menu-toggle {
+    display: none;
+}
+#menu-toggle:checked + .hamburger + nav a {
+    display: block;
+}
+/* ****************************************************** */
+
 
 
 @media (max-width: 1192px) {
@@ -389,21 +421,9 @@ footer {
     }
 }
 
-@media (max-width: 1082px) {
-    .accueil {
-        height: 50vh; /* Hauteur réduite pour les appareils mobiles */
-    }
-    .accueil h1 {
-        font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
-    }
+@media (max-width: 1372px) {
     .galerie-container {
         flex-direction: column;
-    }
-    #agenceEcoContainer, #agenceEcoSpace{
-        display: none;
-    }
-    #menuContainer{
-        display: block;
     }
     #topImgGalleryContainer{
         grid-template-columns: repeat(1, 1fr);
@@ -413,18 +433,63 @@ footer {
     }
 }
 
-@media (max-width: 655px) {
-    /*header nav {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 1117px) {
+    .accueil {
+        height: 50vh;
     }
-    nav a {
-        width: 100%;
-        text-align: center;
-    }*/
+    .accueil h1 {
+        font-size: 1.5em;
+    }
+    #agenceEcoContainer, #agenceEcoSpace{
+        display: none;
+    }
+    #menuContainer{
+        display: flex;
+        justify-content: space-around;
+    }
+    #contactInfoPart1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 677px) {
+    header .menu-items {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .sectionSeparator{
+        height: 20px;
+        top: -320px;
+        position: relative;
+    }
+
+    #clientInfosContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #clientInfosBox-4{
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .menu-items{
+        display: block;
+    }
+    #menu-toggle:checked ~ .menu-items > a {
+        display: block;
+    }
+    #menu-toggle:checked + #menuHamburger::after{
+        content: '\2716';
+
+    }
+
+    .menu{
+        display: block;
+    }
 
     #menuContainer{
-        font-size: 12px;
+        height: 100%;
     }
     #menuItemTeam::after{
         content: 'Équipe';
@@ -465,13 +530,13 @@ footer {
     }
     #topImgGalleryContainer{
         justify-items: center;
+        padding: 0;
     }
     .topGalleryLeftPart{
         display: none;
     }
     .topImgGallery{
         border-radius: 15px;
-        width: 70%;
         height: auto;
     }
     .logosGallery{
@@ -524,6 +589,12 @@ footer {
     }
     #footerContainer{
         grid-template-columns: repeat(4, 1fr);
+    }
+    #clientInfosContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #clientInfosBox-4, #clientInfosBox-3{
+        display: none;
     }
 }
 
