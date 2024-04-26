@@ -14,10 +14,9 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    position: fixed; /* ou 'absolute', selon le comportement désiré */
-    width: 100%; /* Assurez-vous qu'il s'étend sur toute la largeur */
-    z-index: 1000; /* Assurez-vous qu'il reste au-dessus des autres éléments */
-    /*background: #fff;*/
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 header nav {
     display: flex;
@@ -45,6 +44,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+#contactNom:focus, #contactCategotie:focus, #contactTel:focus, #contactVille:focus, #contactEmail:focus, #contactMessage:focus {
+    outline: 0; /* suppression du contour en focus */
 }
 .sectionSeparator{
     height: 50px;
@@ -107,6 +109,7 @@ footer {
 .clientInfosBox{
     font-size: 14px;
     color: white;
+    text-align: center;
 }
 .clientInfosNumber{
     font-size: 16px;
@@ -153,10 +156,10 @@ footer {
     display: flex;
     border: 1px #ccc solid;
     border-radius: 50%;
-    padding: 50px;
+    padding: 15%;
 }
 .topImgGallery img {
-    width: 50px;
+    width: 5vh;
 }
 .topImgGallery {
     overflow: hidden;
@@ -202,6 +205,9 @@ footer {
 .menu{
     justify-self: end;
 }
+.contentSection {
+    padding: 0 15%;
+}
 
 /* Le texte peut se rétrécir */
 #topGalleryRightPart {
@@ -222,7 +228,7 @@ footer {
 }
 #galerie {
     text-align: center;
-    padding: 4em;
+    margin-bottom: 50px
 }
 #titleEndPart{
     color: var(--yellow);
@@ -254,9 +260,6 @@ footer {
     justify-items: center;
     margin-top: 50px;
 }
-#contact{
-    padding: 15px;
-}
 #contactInfoPart1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -271,12 +274,13 @@ footer {
     margin-bottom: 50px;
 }
 #clientInfosContainer{
-    background-color: var(--backgroundDark);;
+    background-color: var(--backgroundDark);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 140px;
     height: 10vh;
     align-items: center;
+    justify-items: center;
 }
 #serviceLeft{
     justify-self: end;
@@ -289,6 +293,7 @@ footer {
 #contact{
     background-color: var(--backgroundDark);
     color: white;
+    padding-bottom: 20px;
 }
 #contactButtonContainer{
     width: 100%;
@@ -372,9 +377,6 @@ footer {
 #footerCoordSymbolContainerTel{
     padding-top: 6px;
 }
-#menuHamburger::after{
-    content: '\2630';
-}
 #teamDescription{
     padding: 0 5px;
 }
@@ -389,6 +391,9 @@ footer {
 #menuHamburger{
     text-align: center;
     margin-right: 5px;
+}
+#menuHamburger::after{
+    content: '\2630';
 }
 #menu-toggle {
     display: none;
@@ -440,9 +445,6 @@ footer {
     .accueil h1 {
         font-size: 1.5em;
     }
-    #agenceEcoContainer, #agenceEcoSpace{
-        display: none;
-    }
     #menuContainer{
         display: flex;
         justify-content: space-around;
@@ -450,46 +452,8 @@ footer {
     #contactInfoPart1{
         grid-template-columns: repeat(1, 1fr);
     }
-}
-
-@media (max-width: 677px) {
-    header .menu-items {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-    .sectionSeparator{
-        height: 20px;
-        top: -320px;
-        position: relative;
-    }
-
-    #clientInfosContainer{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    #clientInfosBox-4{
-        display: none;
-    }
-
-    #menu-toggle:checked ~ .menu-items{
-        display: block;
-    }
-    #menu-toggle:checked ~ .menu-items > a {
-        display: block;
-    }
-    #menu-toggle:checked + #menuHamburger::after{
-        content: '\2716';
-
-    }
-
-    .menu{
-        display: block;
-    }
-
-    #menuContainer{
-        height: 100%;
+    .contentSection {
+        padding: 0 10%;
     }
     #menuItemTeam::after{
         content: 'Équipe';
@@ -503,23 +467,71 @@ footer {
     #menuItemGallery::after{
         content: 'Galerie';
     }
+}
+
+@media (max-width: 768px) {
+    .contentSection {
+        padding: 0 5%;
+    }
+}
+
+@media (max-width: 677px) {
+    header .menu-items {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    #menu-toggle:checked ~ .menu-items{
+        display: block;
+    }
+    #menu-toggle:checked ~ .menu-items > a {
+        display: block;
+    }
+    #menu-toggle:checked + #menuHamburger::after{
+        content: '\2716';
+    }
+    .menu{
+        display: block;
+    }
+    #menuContainer{
+        height: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #agenceEcoContainer{
+        position: absolute;
+        top: 0;
+        left: 5px;
+    }
+
+    .sectionSeparator{
+        height: 20px;
+        top: -320px;
+        position: relative;
+    }
+
+    #clientInfosContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #clientInfosBox-4{
+        display: none;
+    }
+
     #footerSectionTitleInfos::after{
         content: 'infos';
     }
-
     #footerContainer{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        row-gap: 20px;
     }
-    #footerSectionGallery{
-        grid-column: 1 / 5;
+    #footerSectionCoords{
         display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        gap: 67px;
-    }
-    #footerTelContainer{
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        padding: 5px 0 5px 55px;
+        grid-column: 1 / 3;
     }
     #teamMembersContainer{
         display: grid;
@@ -530,7 +542,6 @@ footer {
     }
     #topImgGalleryContainer{
         justify-items: center;
-        padding: 0;
     }
     .topGalleryLeftPart{
         display: none;
@@ -543,39 +554,18 @@ footer {
         display: flex;
         border: 1px #ccc solid;
         border-radius: 50%;
-        padding: 25px;
-    }
-    .topImgGallery img {
-        width: 25px;
     }
     .logosGalleryTitle{
         font-size: 12px;
     }
+    .footerSectionTitle{
+        margin-bottom: 10px;
+    }
 }
 
-@media (max-width: 555px) {
-    .logosGallery{
-        padding: 15px;
-    }
-    .topImgGallery img {
-        width: 15px;
-    }
-    .logosGalleryTitle{
-        font-size: 10px;
-    }
-}
 @media (max-width: 487px) {
     #accueil h1 {
         margin-bottom: 20px;
-    }
-    .logosGallery{
-        padding: 7px;
-    }
-    .topImgGallery img {
-        width: 7px;
-    }
-    .logosGalleryTitle{
-        font-size: 8px;
     }
     .accueil-content{
         bottom: 25%;
@@ -587,14 +577,17 @@ footer {
     #logosGalleryContainer{
         display: none;
     }
-    #footerContainer{
-        grid-template-columns: repeat(4, 1fr);
-    }
     #clientInfosContainer{
         grid-template-columns: repeat(2, 1fr);
     }
     #clientInfosBox-4, #clientInfosBox-3{
         display: none;
+    }
+    #servicesContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #serviceLeft, #serviceRight{
+        justify-self: center;
     }
 }
 
