@@ -17,6 +17,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px #ccc solid;
 }
 header nav {
     display: flex;
