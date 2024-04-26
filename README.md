@@ -1,4 +1,4 @@
-# Créer le site web d'une agence web à partir du HTML/CSS
+# HTML/CSS : Créer le site web d'une agence web
 ## Installation
 ### GIT
 #### Depuis un Shell de votre OS avec Node.js d'installé:
