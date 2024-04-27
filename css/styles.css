@@ -1,5 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+/* ****************************** VARIABLES ******************************* */
+:root{
+    --backgroundDark: #053b44;
+    --menu: #fbfbfb;
+    --menuItemSelected: #f2f2f2;
+    --text: #565E65;
+    --title2: #029D5B;
+    --titles: #1C2126;
+    --yellow: #D5F31F;
+}
+/* ************************************************************************ */
 
+
+/* ************************ BASICS **************************************** */
 * {
     box-sizing: border-box;
 }
@@ -8,15 +20,52 @@ body, h1, h2, h3, p {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+/* ************************************************************************ */
+
+
+/* ************************ HELPERS *************************************** */
+.center{
+    text-align: center;
+}
+.coordSymbol{
+    width: 25px;
+}
+.fLeft{
+    float: left;
+}
+.fRight{
+    float: right;
+}
+.jStart{
+    justify-self: start;
+}
+.jEnd{
+    justify-self: end;
+}
+.mAuto{
+    margin: auto;
+}
+.pos00{
+    object-position: 0% 0%;
+}
+/* ************************************************************************ */
+
+
+/* ************************ ACCUEIL TITLE ********************************* */
+#titleEndPart{
+    color: var(--yellow);
+}
+/* ************************************************************************ */
+
+
+/* ************************ HEADER ************************ */
 header {
-    background-color: var(--menu);
-    color: var(--text);
-    position: fixed;
-    width: 100%;
-    top: 0;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
+    background-color: var(--menu);
+    color: var(--text);
     border-bottom: 1px #ccc solid;
 }
 header nav {
@@ -32,207 +81,17 @@ nav a {
 nav a:hover {
     background-color: var(--menuItemSelected);
 }
-main {
-    /*padding-top: 100px; /* Espace pour l'entête fixe */
-}
-section {
-    margin-top: 0px;
-}
-footer {
-    background-color: var(--backgroundDark);
-    color: white;
-    padding: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-#contactNom:focus, #contactCategotie:focus, #contactTel:focus, #contactVille:focus, #contactEmail:focus, #contactMessage:focus {
-    outline: 0; /* suppression du contour en focus */
-}
-.sectionSeparator{
-    height: 50px;
-}
-.accueil-content {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right; /* Aligner le texte à droite */
-    margin: 0; /* Ajustez selon la maquette */
-    padding: 2em; /* Ajustez pour positionner le contenu en bas à droite */
-    max-width: 600px;
-}
-.galerie-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-.galerie-container img {
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #ccc;
-}
-.center{
-    text-align: center;
-}
-.sectionTitle{
-    color:var(--title2);
-    text-align: center;
-    font-size: 33px;
-    margin-bottom: 25px;
-}
-.teamMember{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
-.serviceContainer{
-    width: 177px;
-    height: 177px;
-    background-color: #eee;
-    border-radius: 15px;
-    display: flex;
-}
-.service{
-    width: 77px;
-    height: 77px;
-    object-fit: cover;
-    object-position: center;
-    text-align: center;
-}
-.teamMemberDescription{
-    font-size: 14px;
-    color: var(--text);
-    font-weight: 400;
-}
-.clientInfosBox{
-    font-size: 14px;
-    color: white;
-    text-align: center;
-}
-.clientInfosNumber{
-    font-size: 16px;
-    color: var(--yellow);
-}
-.pos00{
-    object-position: 0% 0%;
-}
-.mAuto{
-    margin: auto;
-}
-.jStart{
-    justify-self: start;
-}
-.jEnd{
-    justify-self: end;
-}
-.form-group {
-    margin-bottom: 15px; /* Ajoute un espace en dessous de chaque groupe d'entrée */
-    width: 100%;
-}
+/* ******************************************************** */
 
-.form-group label {
-    display: block; /* Rend le label en bloc pour qu'il occupe sa propre ligne */
-    margin-bottom: 5px; /* Ajoute un petit espace entre le label et l'input */
-}
 
-.form-group input, textarea, #contactEmail  {
-    width: 100%; /* Utiliser la largeur complète du conteneur */
-    padding: 10px; /* Ajoute un peu d'espacement interne à l'input */
-    border: 2px solid white; /* Une bordure légère pour l'input */
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: var(--backgroundDark);
-    color: white;
-}
-.topImgGallery{
-    border-radius: 15px;
-    width: 100%;
-    height: auto;
-}
-.logosGallery{
-    display: flex;
-    border: 1px #ccc solid;
-    border-radius: 50%;
-    padding: 15%;
-}
-.topImgGallery img {
-    width: 5vh;
-}
-.topImgGallery {
-    overflow: hidden;
-}
-.galleryArrow{
-    width: 27px;
-    height: 27px;
-    color: var(--text);
-    border: 1px #ccc solid;
-    border-radius: 50%;
-    padding: 3px;
-    line-height: 1.3;
-}
-.galleryArrow:hover{
-    background-color: var(--titles);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-.coordSymbol{
-    width: 25px;
-}
-.footerCoordContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-}
-.footerCoordSymbolContainer{
-    justify-self: end;
-}
-.footerSectionTitle{
-    margin-bottom: 20px;
-}
-.footerSectionContent, .footerCoordContainer{
-    font-size: 12px;
-}
-.fLeft{
-    float: left;
-}
-.fRight{
-    float: right;
-}
+/* ************************ MENU ************************ */
 .menu{
     justify-self: end;
 }
-.contentSection {
-    padding: 0 15%;
-}
-
-/* Le texte peut se rétrécir */
-#topGalleryRightPart {
-    word-wrap: break-word; /* Autoriser la coupure des mots */
-    overflow-wrap: break-word; /* Pour éviter que le texte ne déborde */
-}
-#accueil{
-    background-image: url('/reactHTML/img/rodion-kutsaev-049M_crau5k-unsplash-1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Faire en sorte que la section d'accueil occupe toute la hauteur de la fenêtre */
-    position: relative;
-}
-#accueil h1 {
-    color: white;
-    font-size: 2.5em;
-}
-#galerie {
-    text-align: center;
-    margin-bottom: 50px
-}
-#titleEndPart{
-    color: var(--yellow);
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
 }
 #agenceEcoContainer{
     display: flex;
@@ -251,115 +110,6 @@ footer {
     height: 55px;
     align-items: center;
 }
-#equipe, #services{
-    font-weight: 900;
-    color: var(--titles);
-}
-#teamMembersContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    margin-top: 50px;
-}
-#contactInfoPart1{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 50px;
-}
-#servicesContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    margin-top: 50px;
-    gap: 80px;
-    margin-bottom: 50px;
-}
-#clientInfosContainer{
-    background-color: var(--backgroundDark);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 140px;
-    height: 10vh;
-    align-items: center;
-    justify-items: center;
-}
-#serviceLeft{
-    justify-self: end;
-    text-align: center;
-}
-#serviceRight{
-    justify-self: start;
-    text-align: center;
-}
-#contact{
-    background-color: var(--backgroundDark);
-    color: white;
-    padding-bottom: 20px;
-}
-#contactButtonContainer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-#contactButton{
-    background-color: var(--yellow);
-    border-radius: 15px;
-    font-weight: 900;
-    font-size: 12px;
-    padding: 10px 40px 10px 40px;
-    border: none;
-    margin-top: 20px;
-}
-#contactTitle{
-    color: var(--yellow);
-}
-#contactMessage{
-    margin-top: 15px;
-}
-#topImgGalleryContainer{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 15px;
-    padding: 15px;
-}
-#topGalleryLeftImg{
-    width: 100%;
-    border-radius: 15px;
-}
-#topGalleryRightPart{
-    border: 1px #ccc solid;
-}
-#logosGalleryContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
-    margin: 8% 0 8%;
-    justify-items: center;
-    color: var(--titles);
-    font-weight: 900;
-}
-#galleryTitle{
-    margin-top: 25px;
-}
-#aproposTitle{
-    margin: 45px 0 15px 0;
-}
-#galleryTitleText{
-    color: var(--titles);
-    font-weight: 900;
-    margin-bottom: 50px;
-}
-#galleryImg{
-    width: 100%;
-}
-#footerContainer{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-}
-#footerTelContainer{
-    margin-bottom: 10px;
-}
 #menuItemTeam::after{
     content: 'Notre équipe';
 }
@@ -371,23 +121,6 @@ footer {
 }
 #menuItemGallery::after{
     content: 'Notre galerie';
-}
-#footerSectionTitleInfos::after{
-    content: 'informations';
-}
-#footerCoordSymbolContainerTel{
-    padding-top: 6px;
-}
-#teamDescription{
-    padding: 0 5px;
-}
-
-
-/* ************************ MENU ************************ */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
 }
 #menuHamburger{
     text-align: center;
@@ -405,7 +138,323 @@ footer {
 /* ****************************************************** */
 
 
+/* ************************ SECTION *************************************** */
+.contentSection {
+    padding: 0 15%;
+}
+section {
+    margin-top: 0px;
+}
+.sectionSeparator{
+    height: 50px;
+}
+.sectionTitle{
+    color:var(--title2);
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 25px;
+}
+/* ************************************************************************ */
 
+
+/* ************************ SECTION ACCUEIL ******************************* */
+.accueil-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right; /* Aligner le texte à droite */
+    max-width: 600px;
+    margin: 0; /* Ajustez selon la maquette */
+    padding: 2em; /* Ajustez pour positionner le contenu en bas à droite */
+}
+#accueil{
+    position: relative;
+    height: 100vh; /* Faire en sorte que la section d'accueil occupe toute la hauteur de la fenêtre */
+    background-image: url('/reactHTML/img/rodion-kutsaev-049M_crau5k-unsplash-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#accueil h1 {
+    color: white;
+    font-size: 2.5em;
+}
+/* ************************************************************************* */
+
+
+/* ************************ SECTION ÉQUIPE ********************************* */
+.teamMember{
+    object-position: center;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.teamMemberDescription{
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 400;
+}
+#teamMembersContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-top: 50px;
+}
+#equipe{
+    font-weight: 900;
+    color: var(--titles);
+}
+/* ************************************************************************* */
+
+
+/* ************************ SECTION SERVICES ******************************* */
+.serviceContainer{
+    display: flex;
+    width: 177px;
+    height: 177px;
+    background-color: #eee;
+    border-radius: 15px;
+}
+.service{
+    object-position: center;
+    object-fit: cover;
+    text-align: center;
+    width: 77px;
+    height: 77px;
+}
+#servicesContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 80px;
+    margin: 50px 0 50px;
+}
+#serviceLeft{
+    justify-self: end;
+    text-align: center;
+}
+#serviceRight{
+    justify-self: start;
+    text-align: center;
+}
+#services{
+    font-weight: 900;
+    color: var(--titles);
+}
+/* ************************************************************************* */
+
+
+/* ************************ SECTION CONTACT ******************************** */
+.form-group {
+    margin-bottom: 15px; /* Ajoute un espace en dessous de chaque groupe d'entrée */
+    width: 100%;
+}
+.form-group label {
+    display: block; /* Rend le label en bloc pour qu'il occupe sa propre ligne */
+    margin-bottom: 5px; /* Ajoute un petit espace entre le label et l'input */
+}
+.form-group input, textarea, #contactEmail  {
+    width: 100%; /* Utiliser la largeur complète du conteneur */
+    padding: 10px; /* Ajoute un peu d'espacement interne à l'input */
+    border: 2px solid white; /* Une bordure légère pour l'input */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--backgroundDark);
+    color: white;
+}
+#contact{
+    background-color: var(--backgroundDark);
+    color: white;
+    padding-bottom: 20px;
+}
+#contactButton{
+    background-color: var(--yellow);
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 10px 40px 10px 40px;
+    border: none;
+}
+#contactButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#contactInfoPart1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+#contactMessage{
+    margin-top: 15px;
+}
+#contactNom:focus, #contactCategotie:focus, #contactTel:focus, #contactVille:focus, #contactEmail:focus, #contactMessage:focus {
+    outline: 0; /* suppression du contour en focus */
+}
+#contactTitle{
+    color: var(--yellow);
+}
+/* ************************************************************************* */
+
+
+/* ************************ CLIENTS INFOS ********************************* */
+.clientInfosBox{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.clientInfosNumber{
+    font-size: 16px;
+    color: var(--yellow);
+}
+#clientInfosContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    background-color: var(--backgroundDark);
+    height: 10vh;
+    margin-top: 140px;
+}
+/* ************************************************************************ */
+
+
+/* ************************ SECTION GALERIE ******************************** */
+.galerie-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.galerie-container img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #ccc;
+}
+.galleryArrow{
+    width: 27px;
+    height: 27px;
+    color: var(--text);
+    border: 1px #ccc solid;
+    border-radius: 50%;
+    padding: 3px;
+    line-height: 1.3;
+}
+.galleryArrow:hover{
+    background-color: var(--titles);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.logosGallery{
+    display: flex;
+    border: 1px #ccc solid;
+    border-radius: 50%;
+    padding: 15%;
+}
+.topImgGallery{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.topImgGallery img {
+    width: 5vh;
+}
+#aproposTitle{
+    margin: 45px 0 15px 0;
+}
+#galerie {
+    text-align: center;
+    margin-bottom: 50px
+}
+#galleryImg{
+    width: 100%;
+}
+#galleryTitle{
+    margin-top: 25px;
+}
+#galleryTitleText{
+    color: var(--titles);
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+#logosGalleryContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    margin: 8% 0 8%;
+    justify-items: center;
+    color: var(--titles);
+    font-weight: 900;
+}
+#topGalleryLeftImg{
+    width: 100%;
+    border-radius: 15px;
+}
+/* Le texte peut se rétrécir */
+#topGalleryRightPart {
+    border: 1px #ccc solid;
+    word-wrap: break-word; /* Autoriser la coupure des mots */
+    overflow-wrap: break-word; /* Pour éviter que le texte ne déborde */
+}
+#topImgGalleryContainer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 15px;
+    padding: 15px;
+}
+
+#teamDescription{
+    padding: 0 5px;
+}
+/* ***************************************************************** */
+
+
+/* ************************ FOOTER ************************ */
+footer {
+    background-color: var(--backgroundDark);
+    color: white;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footerCoordContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.footerCoordSymbolContainer{
+    justify-self: end;
+}
+.footerSectionContent, .footerCoordContainer{
+    font-size: 12px;
+}
+.footerSectionTitle{
+    margin-bottom: 20px;
+}
+#footerContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+#footerTelContainer{
+    margin-bottom: 10px;
+}
+#footerCoordSymbolContainerTel{
+    padding-top: 6px;
+}
+#footerSectionTitleInfos::after{
+    content: 'informations';
+}
+/* ******************************************************** */
+
+
+/* ************************ MEDIA QUERIES ************************ */
 @media (max-width: 1192px) {
     .footerCoordContainer{
         grid-template-columns: 35% 65%;
@@ -431,11 +480,11 @@ footer {
     .galerie-container {
         flex-direction: column;
     }
-    #topImgGalleryContainer{
-        grid-template-columns: repeat(1, 1fr);
-    }
     .topGalleryLeftPart{
         display: none;
+    }
+    #topImgGalleryContainer{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -446,15 +495,15 @@ footer {
     .accueil h1 {
         font-size: 1.5em;
     }
+    .contentSection {
+        padding: 0 10%;
+    }
     #menuContainer{
         display: flex;
         justify-content: space-around;
     }
     #contactInfoPart1{
         grid-template-columns: repeat(1, 1fr);
-    }
-    .contentSection {
-        padding: 0 10%;
     }
     #menuItemTeam::after{
         content: 'Équipe';
@@ -483,6 +532,32 @@ footer {
     .hamburger {
         display: block;
     }
+    .menu{
+        display: block;
+    }
+    .sectionSeparator{
+        height: 20px;
+        top: -320px;
+        position: relative;
+    }
+    .topGalleryLeftPart{
+        display: none;
+    }
+    .topImgGallery{
+        border-radius: 15px;
+        height: auto;
+    }
+    .logosGallery{
+        display: flex;
+        border: 1px #ccc solid;
+        border-radius: 50%;
+    }
+    .logosGalleryTitle{
+        font-size: 12px;
+    }
+    .footerSectionTitle{
+        margin-bottom: 10px;
+    }
     #menu-toggle:checked ~ .menu-items{
         display: block;
     }
@@ -492,34 +567,25 @@ footer {
     #menu-toggle:checked + #menuHamburger::after{
         content: '\2716';
     }
-    .menu{
-        display: block;
-    }
     #menuContainer{
         height: 100%;
         justify-content: center;
         gap: 20px;
     }
-
     #agenceEcoContainer{
         position: absolute;
-        top: 0;
+        top: 10px;
         left: 5px;
     }
-
-    .sectionSeparator{
-        height: 20px;
-        top: -320px;
-        position: relative;
+    #servicesContainer{
+        margin-top: 0;
     }
-
     #clientInfosContainer{
         grid-template-columns: repeat(3, 1fr);
     }
     #clientInfosBox-4{
         display: none;
     }
-
     #footerSectionTitleInfos::after{
         content: 'infos';
     }
@@ -544,33 +610,15 @@ footer {
     #topImgGalleryContainer{
         justify-items: center;
     }
-    .topGalleryLeftPart{
-        display: none;
-    }
-    .topImgGallery{
-        border-radius: 15px;
-        height: auto;
-    }
-    .logosGallery{
-        display: flex;
-        border: 1px #ccc solid;
-        border-radius: 50%;
-    }
-    .logosGalleryTitle{
-        font-size: 12px;
-    }
-    .footerSectionTitle{
-        margin-bottom: 10px;
-    }
 }
 
 @media (max-width: 487px) {
-    #accueil h1 {
-        margin-bottom: 20px;
-    }
     .accueil-content{
         bottom: 25%;
         right: 15%;
+    }
+    #accueil h1 {
+        margin-bottom: 20px;
     }
     #servicesContainer{
         gap: 20px;
@@ -591,16 +639,4 @@ footer {
         justify-self: center;
     }
 }
-
-
-
-
-:root{
-    --backgroundDark: #053b44;
-    --text: #565E65;
-    --title2: #029D5B;
-    --titles: #1C2126;
-    --yellow: #D5F31F;
-    --menu: #fbfbfb;
-    --menuItemSelected: #f2f2f2;
-}
+/* ******************************************************** */
